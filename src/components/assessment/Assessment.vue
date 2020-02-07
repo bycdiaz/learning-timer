@@ -1,13 +1,15 @@
 <template>
   <div id="app">
     <PageTitle title="How long until"/>
-    <EnteredInfo />
+    <EnteredInfo v-if="counter < 5"/>
     <p>
       This is the Assessment page! Please answer the question below 
       and click submit after you have entered the information.
     </p>
     <component :is="dynamicComponent"></component>
-    <button @click="counter += 1">Next Page</button>
+    <button v-if="counter > 0" @click="counter -= 1">Previous</button>
+    <button v-if="counter < 5" @click="counter += 1">Next Page</button>
+    <router-link v-if="counter === 5" to="/results" tag="button">Submit for Review</router-link>
     {{ counter }}
   </div>
 </template>
@@ -35,7 +37,7 @@ export default {
   data: function() {
     return {
       counter: 0,
-      questionArray: [
+      dynamicComponentArray: [
         Question1,
         Question2,
         Question3,
@@ -49,7 +51,7 @@ export default {
       return this.counter;
     },
     dynamicComponent() {
-      return this.questionArray[this.result]
+      return this.dynamicComponentArray[this.result]
     }
   } 
 }
