@@ -1,7 +1,5 @@
 <template>
-  <form @submit.prevent="testFunction">
-    <input type="submit" v-bind:value="buttonText">
-  </form>
+  <router-link to="/assessment" tag="button">{{ buttonText }}</router-link>
 </template>
 
 <script>
