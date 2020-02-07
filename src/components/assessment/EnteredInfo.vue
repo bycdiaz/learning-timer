@@ -1,13 +1,13 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div class="entered-info">
+    All Entered info will appear here.
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'app',
+  name: 'EnteredInfo',
 }
 </script>
 

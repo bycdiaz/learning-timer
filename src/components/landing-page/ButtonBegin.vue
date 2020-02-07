@@ -8,11 +8,6 @@ export default {
   props: {
     buttonText: String,
   },
-  methods : {
-    testFunction() {
-      console.log('Button Works!');
-    },
-  },
 }
 </script>
 
