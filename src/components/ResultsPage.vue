@@ -2,6 +2,7 @@
   <div class="results">
     <PageTitle />
     <p>Here are your results:</p>
+    <router-link to="/" tag="button">Go Again</router-link>
   </div>
 </template>
 

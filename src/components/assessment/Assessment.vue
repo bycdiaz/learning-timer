@@ -2,15 +2,17 @@
   <div id="app">
     <PageTitle title="How long until"/>
     <EnteredInfo v-if="counter < 5"/>
-    <p>
-      This is the Assessment page! Please answer the question below 
-      and click submit after you have entered the information.
+    <p v-if="counter < 5">
+      Please answer the question below 
+      and click Next Page after you are satisfied with your entry.
+    </p>
+    <p v-if="counter === 5">
+      Please review your information. If you are satisfied, click the button below.
     </p>
     <component :is="dynamicComponent"></component>
     <button v-if="counter > 0" @click="counter -= 1">Previous</button>
     <button v-if="counter < 5" @click="counter += 1">Next Page</button>
     <router-link v-if="counter === 5" to="/results" tag="button">Submit for Review</router-link>
-    {{ counter }}
   </div>
 </template>
 

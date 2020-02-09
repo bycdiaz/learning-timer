@@ -1,6 +1,8 @@
 <template>
   <div class="entered-info">
-    All Entered info will appear here.
+    <p>All Entered info will appear here below:</p>
+      {{ $store.getters.q1Response}}
+    <p>End of entered info.</p>
   </div>
 </template>
 
