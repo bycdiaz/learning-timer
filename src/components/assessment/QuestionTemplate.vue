@@ -1,7 +1,9 @@
 <template>
   <div class="question-template">
-    <p>Question information will appear below</p>
-    {{ questions.question1.description }}
+    <p>Question information will appear here</p>
+    {{ $store.getters.counter }}
+    
+    {{ questions[$store.getters.counter].description }}
   </div>
 </template>
 
