@@ -1,23 +1,23 @@
 const questions = [
   {
-    type: 'input',
-    description: "Text for question 1 here.",
+    type: 'textArea',
+    description: "In 140 characters or less, please describe your reason for learning to code:",
   },
   {
-    type: 'input',
-    description: "Text for question 2 here.",
+    type: 'numericInput',
+    description: "How many hours a week can you dedicate to learning?",
   },
   {
-    type: 'input',
-    description: "Text for question 3 here.",
+    type: 'radioFocus',
+    description: "Of the hours you can dedicate to learning, please indicate your level of focus for that duration.",
   },
   {
-    type: 'input',
-    description: "Text for question 4 here.",
+    type: 'radioMotivation',
+    description: "Please rate your level of motivation.",
   },
   {
-    type: 'input',
-    description: "Text for question 5 here.",
+    type: 'pace',
+    description: "Please indicate how quickly you learn or work through tasks of varying difficulty",
   },
 ];
 
