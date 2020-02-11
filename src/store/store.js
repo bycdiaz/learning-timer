@@ -6,11 +6,11 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: {
     counter: 0,
-    q1Response: '',
+    responses: [],
   },
   mutations: {
-    change(state, q1Response) {
-      state.q1Response = q1Response
+    collectAnswer(state, answer) {
+      state.responses.push(answer)
     },
     counterAdd(state, counter) {
       state.counter = counter 
@@ -20,7 +20,7 @@ export const store = new Vuex.Store({
     }
   },
   getters: {
-    // q1Response: state => state.q1Response
+    responses: state => state.responses,
     counter: state => state.counter
   }
 })
