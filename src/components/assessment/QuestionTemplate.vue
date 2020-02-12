@@ -1,21 +1,14 @@
 <template>
   <div class="question-template">
-    <h1>Question {{ this.$store.getters.counter + 1}}</h1>
     <p>
       Please answer the question below and click Next Page after you 
       are satisfied with your entry.
     </p>
-    <p>{{ questions[this.$store.getters.counter].description }}</p>
-    <form @submit.prevent="collectAnswer">
-      {{ questions[this.$store.getters.counter].type }}
 
-      <div v-if="questions[this.$store.getters.counter].question === 'question1'">
-        <textarea value="answer" maxlength="140"></textarea>
-      </div>
+    <form>
+      <component :is="question.type" :content="question.content"/>
 
-      <div v-else-if="questions[this.$store.getters.counter].question === 'question2'">
-        <input type="number">
-      </div>
+<!-- 
 
       <div v-else-if="questions[this.$store.getters.counter].question === 'question3'">
         <input type="radio" name="focusLevel" value="high">
@@ -56,39 +49,29 @@
           <option value="medium">Medium</option>
           <option value="slow">Slow</option>
         </select>
-      </div>
+      </div> -->
 
-      <div class="buttons">
-        <button v-if="$store.getters.counter > 0" @click="counterSubtract">Previous</button>
-        <button type="submit" v-if="$store.getters.counter < 5" @click="counterAdd()">Next Page</button>
-      </div>
     </form>
   </div>
 </template>
 
 <script>
 import questions from './questions.js'
+import TextArea from './question-types/TextArea.vue'
+import NumberInput from './question-types/NumberInput.vue'
 
 export default {
   name: 'QuestionTemplate',
+  components: {
+    TextArea,
+    NumberInput,
+  },
   data: function() {
     return {
       questions,
     }
   },
-    methods: {
-    counterAdd: function() {
-      return this.$store.commit('counterAdd', (this.$store.getters.counter + 1))
-    },
-    counterSubtract: function() {
-      return this.$store.commit('counterSubtract', (this.$store.getters.counter - 1))
-    },
-    collectAnswer: function(e) {
-      console.log(e.target.value);
-      
-      return this.$store.commit('collectAnswer', e.target.value)
-    },
-  },
+  props: ["page", "question"]
 }
 
 </script>

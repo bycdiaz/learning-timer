@@ -1,11 +1,15 @@
 const questions = [
   {
-    question: 'question1',
-    description: "In 140 characters or less, please describe your reason for learning to code:",
+    type: "TextArea",
+    content: {
+      prompt: "In 140 characters or less, please describe your reason for learning to code:",
+    },
   },
   {
-    question: 'question2',
-    description: "How many hours a week can you dedicate to learning?",
+    type: 'NumberInput',
+    content: {
+      prompt: "How many hours a week can you dedicate to learning?",
+    }
   },
   {
     question: 'question3',
