@@ -37,4 +37,7 @@ export default {
 </script>
 
 <style>
+.question-template {
+  border: 1px black solid;
+}
 </style>

@@ -15,7 +15,7 @@ const questions = [
   {
     type: "RadioInput",
     content: {
-      prompt: "Of the hours you can dedicate to learning, please indicate your level of focus for that duration.",
+      prompt: "Of the hours you can dedicate to learning, please indicate your average level of focus for that duration.",
       options: [
         {
           attributes: {

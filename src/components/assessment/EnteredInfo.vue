@@ -14,6 +14,8 @@ export default {
 
 </script>
 
-<style>
-
+<style scoped>
+  .entered-info {
+    border: 1px black solid;
+  }
 </style>
