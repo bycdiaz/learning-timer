@@ -1,5 +1,6 @@
 <template>
   <div class="input-summary">
+    <p>Questions and your answers are listed below:</p>
     <div class="qa-pair" v-for="(answer, index) in answers" v-bind:key="answer.value">
       <p> {{ `Question ${index + 1}: ${questions[index].content.prompt}`}}</p>
       <span>{{ answer }}</span>

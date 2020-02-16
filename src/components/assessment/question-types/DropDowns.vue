@@ -2,14 +2,14 @@
   <div class="question">
     <form>
       <p>{{ content.prompt }}</p>
-      <p>Dropdown info here.</p>
-      <div class="drop-down" v-for="dropdown in content.dropdowns" :key="dropdown.value">
+      <div class="drop-down" v-for="dropdown in content.dropdowns" v-bind:key="dropdown.value">
         <label :for="dropdown.labelFor">{{ dropdown.text}}</label>
         <select 
           :key="dropdown.value"
-          v-model="selections[content.dropdowns.indexOf(dropdown)]"
-          @change="$emit('change', selections)"
+          v-model="selection"
+          @change="$emit('change', selection)"
         >
+          <option disabled value="">Please select one</option>
           <option v-for="option in dropdown.dropSelections" :key="option.value">{{ option.selectText}}</option>
         </select>
       </div>
@@ -23,7 +23,8 @@ export default {
   props: ["content"],
   data() {
     return {
-      selections: [],
+      selected: '',
+      selection: '',
     };
   },
 }

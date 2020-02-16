@@ -88,15 +88,11 @@ const questions = [
   {
     type: "DropDowns",
     content: {
-      prompt: "Please indicate how quickly you learn or work through tasks of varying difficulty.",
+      prompt: "Please indicate how quickly you learn concepts, or work through tasks, of average difficulty.",
       dropdowns: [
         {
           dropSelections: [
             {
-              value: "",
-              selectText: "Please select one"
-            },
-            {
               value: "fast",
               selectText: "Fast"
             },
@@ -109,55 +105,9 @@ const questions = [
               selectText: "Slow"
             }
           ],
-          text: "Master Level Exercises/Topics",
-          labelFor: "masterDifficulty",
-          SelectId: "masterDifficulty",
-        },
-        {
-          dropSelections: [
-            {
-              value: "",
-              selectText: "Please select one"
-            },
-            {
-              value: "fast",
-              selectText: "Fast"
-            },
-            {
-              value: "medium",
-              selectText: "Medium"
-            },
-            {
-              value: "slow",
-              selectText: "Slow"
-            }
-          ],
-          text: "Medium Level Exercises/Topics",
-          labelFor: "mediumDifficulty",
-          SelectId: "mediumDifficulty",
-        },
-        {
-          dropSelections: [
-            {
-              value: "",
-              selectText: "Please select one"
-            },
-            {
-              value: "fast",
-              selectText: "Fast"
-            },
-            {
-              value: "medium",
-              selectText: "Medium"
-            },
-            {
-              value: "slow",
-              selectText: "Slow"
-            }
-          ],
-          text: "Low Level Exercises/Topics",
-          labelFor: "lowDifficulty",
-          SelectId: "lowDifficulty",
+          text: "Select your pace: ",
+          labelFor: "pace",
+          SelectId: "pace",
         },
       ],
     },
