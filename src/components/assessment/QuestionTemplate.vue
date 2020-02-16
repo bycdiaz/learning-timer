@@ -4,10 +4,7 @@
       Please answer the question below and click Next Page after you
       are satisfied with your entry.
     </p>
-
-    <form>
       <component :is="question.type" :content="question.content" @change="$emit('change', $event)" />
-    </form>
   </div>
 </template>
 

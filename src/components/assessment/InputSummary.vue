@@ -1,16 +1,29 @@
 <template>
   <div class="input-summary">
-    <p>Here is all of your information. Please review before submitting.</p>
+    <div class="qa-pair" v-for="(answer, index) in answers" v-bind:key="answer.value">
+      <p> {{ `Question ${index + 1}: ${questions[index].content.prompt}`}}</p>
+      <span>{{ answer }}</span>
+    </div>
   </div>
 </template>
 
 <script>
+import questions from './questions.js'
 
 export default {
   name: 'InputSummary',
+  data: function() {
+    return {
+      questions,
+    }
+  },
+  props: ["answers"],
 }
 </script>
 
 <style>
 
+.qa-pair {
+  border: 1px black solid;
+}
 </style>
