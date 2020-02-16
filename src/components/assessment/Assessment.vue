@@ -9,14 +9,11 @@
     />
     <InputSummary :answers="answers" v-else/>
     <div class="buttons">
-      <button @click="currentPage--" v-if="currentPage < 5">Previous</button>
+      <button @click="currentPage--" v-if="currentPage > 0 && currentPage < 6">Previous</button>
       <button @click="currentPage++" v-if="currentPage <= questions.length - 1">Next Page</button>
-      <div v-else>
-        <button>Edit Responses</button>
-        <router-link to="/results" tag="button" >
-          Submit for Review
-        </router-link>
-      </div>
+      <router-link to="/results" tag="button" v-if="currentPage === 5">
+        Submit for Review
+      </router-link>
     </div>
   </div>
 </template>
