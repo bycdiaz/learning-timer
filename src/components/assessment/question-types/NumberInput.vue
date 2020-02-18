@@ -10,10 +10,10 @@
 <script>
 export default {
   name: 'NumberInput',
-  props: ["content"],
+  props: ["content", "answers", "page"],
   data() {
     return {
-      numberInput: ""
+      numberInput: this.answers[this.page],
     };
   },
 }

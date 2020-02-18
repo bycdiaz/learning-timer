@@ -20,11 +20,11 @@
 <script>
 export default {
   name: 'DropDowns',
-  props: ["content"],
+  props: ["content", "answers", "page"],
   data() {
     return {
       selected: '',
-      selection: '',
+      selection: this.answers[this.page],
     };
   },
 }

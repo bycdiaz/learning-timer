@@ -21,10 +21,10 @@
 <script>
 export default {
   name: "RadioInput",
-  props: ["content", "options"],
+  props: ["content", "answers", "page"],
   data() {
     return {
-      radioValue: null
+      radioValue: this.answers[this.page],
     };
   }
 };

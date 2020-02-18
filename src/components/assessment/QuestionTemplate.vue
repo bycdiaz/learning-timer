@@ -4,7 +4,13 @@
       Please answer the question below and click Next Page after you
       are satisfied with your entry.
     </p>
-      <component :is="question.type" :content="question.content" @change="$emit('change', $event)" />
+      <component
+        :is="question.type"
+        :content="question.content"
+        @change="$emit('change', $event)"
+        :answers="answers"
+        :page="page"
+      />
   </div>
 </template>
 
@@ -29,7 +35,7 @@ export default {
       questions,
     };
   },
-  props: ["page", "question"]
+  props: ["page","answers", "question"]
 };
 </script>
 
