@@ -5,7 +5,7 @@
       <textarea
         value="answer"
         v-model="textInput"
-        @change="$emit('change', textInput)"
+        @change="validate(textInput)"
       >
       </textarea>
     </div>
@@ -21,21 +21,21 @@ export default {
       textInput: this.answers[this.page],
     };
   },
-  
-  // methods: {
-  // captureInput(textInput) {
-  //   console.log(textInput.target.value);
-  // }
-  // validate() {
-  //   // length of at least 140
-  //   // capital to start
-  //   // end with punctuation
-  //   // notify user of issue
-  //   // console.log(textInput);
-  //   console.log(e.target.value);
-  //   this.$emit("valid", e.target.value);
-  // }
-  // }
+  methods: {
+    validate(textInput) {
+      const length = textInput.length;
+      const firstChar = textInput.charAt(0);
+      const lastChar = textInput.slice(-1);
+      const punctuation = ['.', '?', '!'];
+
+      if (length >= 30 && firstChar === firstChar.toUpperCase() && punctuation.includes(lastChar)) {
+        console.log("Valid");
+      } else {
+        console.log("Not Valid");
+      }
+      this.$emit('change', textInput);
+    }
+  }
 };
 </script>
 
