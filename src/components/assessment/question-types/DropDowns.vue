@@ -9,8 +9,14 @@
           v-model="selection"
           @change="$emit('change', selection)"
         >
-          <option disabled value="">Please select one</option>
-          <option v-for="option in dropdown.dropSelections" :key="option.value">{{ option.selectText}}</option>
+          <option 
+            v-for="option in dropdown.dropSelections"
+            :key="option.value"
+            :value="option.value"
+            :disabled="option.disabled"
+          >
+            {{ option.selectText}}
+          </option>
         </select>
       </div>
     </form>
@@ -23,7 +29,6 @@ export default {
   props: ["content", "answers", "page"],
   data() {
     return {
-      selected: '',
       selection: this.answers[this.page],
     };
   },

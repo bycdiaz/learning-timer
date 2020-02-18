@@ -93,6 +93,11 @@ const questions = [
         {
           dropSelections: [
             {
+              selected: true,
+              disabled: true,
+              selectText: "Please select one"
+            },
+            {
               value: "fast",
               selectText: "Fast"
             },
