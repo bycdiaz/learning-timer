@@ -9,7 +9,7 @@ const questions = [
   {
     type: "NumberInput",
     content: {
-      prompt: "How many hours a week can you dedicate to learning?",
+      prompt: "How many hours a week can you dedicate to learning? Please enter a number greater than 1.",
     }
   },
   {
