@@ -2,7 +2,7 @@ const questions = [
   {
     type: "TextArea",
     content: {
-      prompt: "In 140 characters or less, please describe your reason for learning to code:",
+      prompt: "In at least 30 characters, please describe your reason for learning to code. Input must begin with capital letter and end with punctuation (., ?, !).",
       value: '',
     },
   },

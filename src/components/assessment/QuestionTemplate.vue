@@ -8,6 +8,7 @@
         :is="question.type"
         :content="question.content"
         @change="$emit('change', $event)"
+        @validate="$emit('validate', $event)"
         :answers="answers"
         :page="page"
       />

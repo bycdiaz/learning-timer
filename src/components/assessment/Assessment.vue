@@ -7,11 +7,18 @@
       :answers="answers"
       :question="questions[currentPage]"
       @change="answers[currentPage] = $event"
+      @validate="validStatus = $event"
     />
     <InputSummary :answers="answers" v-else />
     <div class="buttons">
       <button @click="currentPage--" v-if="currentPage > 0 && currentPage < 6">Previous</button>
-      <button @click="currentPage++" v-if="currentPage <= questions.length - 1">Next Page</button>
+      <button 
+          @click="validStatus === 'valid' ? currentPage++ : null"
+          v-if="currentPage <= questions.length - 1"
+          :disabled="validStatus === 'invalid'"
+        >
+        Next Page
+      </button>
       <router-link to="/results" tag="button" v-if="currentPage === 5">Submit for Review</router-link>
     </div>
   </div>
@@ -34,7 +41,8 @@ export default {
     return {
       currentPage: 0,
       questions,
-      answers: []
+      answers: [],
+      validStatus: '',
     };
   }
 };

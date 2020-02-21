@@ -1,14 +1,15 @@
 <template>
   <div class="question">
-    <div>
+    <form v-on:submit.prevent="validate(textInput)">
       <p>{{ content.prompt }}</p>
       <textarea
         value="answer"
         v-model="textInput"
-        @change="validate(textInput)"
+        @input="validate(textInput)"
       >
       </textarea>
-    </div>
+      <p v-if="invalidInput">Invalid Input! Please see the prompt above.</p>
+    </form>
   </div>
 </template>
 
@@ -19,6 +20,7 @@ export default {
   data() {
     return {
       textInput: this.answers[this.page],
+      invalidInput: false,
     };
   },
   methods: {
@@ -30,10 +32,14 @@ export default {
 
       if (length >= 30 && firstChar === firstChar.toUpperCase() && punctuation.includes(lastChar)) {
         console.log("Valid");
+        this.invalidInput = false;
+        this.$emit('validate', "valid");
+        this.$emit('change', textInput);
       } else {
         console.log("Not Valid");
+        this.invalidInput = true;
+        this.$emit('validate', "invalid");
       }
-      this.$emit('change', textInput);
     }
   }
 };
