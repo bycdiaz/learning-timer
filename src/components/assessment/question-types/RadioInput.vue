@@ -37,13 +37,9 @@ export default {
   methods: {
     validate(option) {
       if (option) {
-        console.log("Valid");
-        this.invalidInput = false;
         this.$emit('validate', "valid");
         this.$emit('change', option.attributes.value)
       } else {
-        console.log("Not Valid");
-        this.invalidInput = true;
         this.$emit('validate', "invalid");
       }
     }

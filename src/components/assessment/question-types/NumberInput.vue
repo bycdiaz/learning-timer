@@ -27,12 +27,10 @@ export default {
     validate(numberInput) {
       if (parseInt(numberInput) > 0) {
         console.log("Valid");
-        this.invalidInput = false;
         this.$emit('validate', "valid");
         this.$emit('change', numberInput);
       } else {
         console.log("Not Valid");
-        this.invalidInput = true;
         this.$emit('validate', "invalid");
       }
     }

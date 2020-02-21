@@ -7,7 +7,7 @@
         <select 
           :key="dropdown.value"
           v-model="selection"
-          @change="$emit('change', selection)"
+          @change="validate(selection)"
         >
           <option 
             v-for="option in dropdown.dropSelections"
@@ -19,19 +19,35 @@
           </option>
         </select>
       </div>
+      <FormErrors :errorStatus="selected" />
     </form>
   </div>
 </template>
 
 <script>
+import FormErrors from '../FormErrors.vue'
+
 export default {
   name: 'DropDowns',
+    components: {
+    FormErrors,
+  },
   props: ["content", "answers", "page"],
   data() {
     return {
       selection: this.answers[this.page],
     };
   },
+  methods: {
+    validate(selection) {
+      if (selection) {
+        this.$emit('validate', "valid");
+        this.$emit('change', selection)
+      } else {
+        this.$emit('validate', "invalid");
+      }
+    }
+  }
 }
 
 </script>

@@ -36,13 +36,9 @@ export default {
       const punctuation = ['.', '?', '!'];
 
       if (length >= 30 && firstChar === firstChar.toUpperCase() && punctuation.includes(lastChar)) {
-        console.log("Valid");
-        this.invalidInput = false;
         this.$emit('validate', "valid");
         this.$emit('change', textInput);
       } else {
-        console.log("Not Valid");
-        this.invalidInput = true;
         this.$emit('validate', "invalid");
       }
     }
