@@ -45,7 +45,11 @@ export default {
   },
   watch: {
     currentPage: function() {
-      this.validStatus = "invalid";
+      if (this.answers[this.currentPage]) {
+        this.validStatus = "valid";
+      } else {
+        this.validStatus = "invalid";
+      }
       return this.validStatus;
     }
   }
