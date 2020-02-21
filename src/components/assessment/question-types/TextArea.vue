@@ -8,14 +8,19 @@
         @input="validate(textInput)"
       >
       </textarea>
-      <p v-if="invalidInput">Invalid Input! Please see the prompt above.</p>
+      <FormErrors :errorStatus="invalidInput" />
     </form>
   </div>
 </template>
 
 <script>
+import FormErrors from '../FormErrors.vue'
+
 export default {
   name: "TextArea",
+  components: {
+    FormErrors,
+  },
   props: ["content", "answers", "page"],
   data() {
     return {

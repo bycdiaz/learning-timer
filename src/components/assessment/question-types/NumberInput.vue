@@ -3,7 +3,7 @@
     <div>
       <p>{{ content.prompt }}</p>
       <input type="number" value="answer" v-model="numberInput" @input="validate(numberInput)">
-      <p v-if="invalidInput">Invalid Input! Please see the prompt above.</p>
+      <FormErrors :errorStatus="invalidInput" />
     </div>
   </div>
 </template>
