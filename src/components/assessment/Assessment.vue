@@ -12,13 +12,11 @@
     <InputSummary :answers="answers" v-else />
     <div class="buttons">
       <button @click="currentPage--" v-if="currentPage > 0 && currentPage < 6">Previous</button>
-      <button 
-          @click="validStatus === 'valid' ? currentPage++ : null"
-          v-if="currentPage <= questions.length - 1"
-          :disabled="validStatus === 'invalid'"
-        >
-        Next Page
-      </button>
+      <button
+        @click="validStatus === 'valid' ? currentPage++ : null"
+        v-if="currentPage <= questions.length - 1"
+        :disabled="validStatus === 'invalid'"
+      >Next Page</button>
       <router-link to="/results" tag="button" v-if="currentPage === 5">Submit for Review</router-link>
     </div>
   </div>
@@ -42,8 +40,14 @@ export default {
       currentPage: 0,
       questions,
       answers: [],
-      validStatus: '',
+      validStatus: "invalid"
     };
+  },
+  watch: {
+    currentPage: function() {
+      this.validStatus = "invalid";
+      return this.validStatus;
+    }
   }
 };
 </script>

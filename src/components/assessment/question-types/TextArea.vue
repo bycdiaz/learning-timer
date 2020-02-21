@@ -1,6 +1,6 @@
 <template>
   <div class="question">
-    <form v-on:submit.prevent="validate(textInput)">
+    <form>
       <p>{{ content.prompt }}</p>
       <textarea
         value="answer"

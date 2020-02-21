@@ -1,16 +1,21 @@
 <template>
   <div class="question">
-    <div>
+    <form>
       <p>{{ content.prompt }}</p>
       <input type="number" value="answer" v-model="numberInput" @input="validate(numberInput)">
       <FormErrors :errorStatus="invalidInput" />
-    </div>
+    </form>
   </div>
 </template>
 
 <script>
+import FormErrors from '../FormErrors.vue'
+
 export default {
   name: 'NumberInput',
+    components: {
+    FormErrors,
+  },
   props: ["content", "answers", "page"],
   data() {
     return {
