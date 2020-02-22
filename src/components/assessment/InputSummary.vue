@@ -1,5 +1,5 @@
 <template>
-  <div class="input-summary">
+  <div>
     <p>Questions and your answers are listed below. If you would like to edit a response, 
       please use the Previous button.</p>
     <div class="qa-pair" v-for="(answer, index) in answers" v-bind:key="answer.value">

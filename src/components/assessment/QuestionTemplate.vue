@@ -1,5 +1,5 @@
 <template>
-  <div class="question-template">
+  <div>
     <p class="directions">
       Please answer the question below and click Next Page after you
       are satisfied with your entry.
@@ -42,13 +42,7 @@ export default {
 </script>
 
 <style scoped>
-.question-template {
-  font-size: 18px;
+.question {
+  margin: 20px 0px;
 }
-
-.directions {
-  margin-bottom: 20px;
-  font-style: italic;
-}
-
 </style>

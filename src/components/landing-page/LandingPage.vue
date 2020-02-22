@@ -26,14 +26,15 @@ export default {
 </script>
 
 <style scoped>
+/* Title Animation Start */
 .title {
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-name: slidein;
 }
 
 @keyframes slidein {
   from {
-    margin-left: 100%;
+    margin-left: 300%;
     width: 300%; 
   }
 
@@ -42,11 +43,13 @@ export default {
     width: 100%;
   }
 }
+/* Title Animation End */
 
+/* Page Layout Start */
 #landing {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
 }
 
 #landing > * {
@@ -57,4 +60,5 @@ export default {
   text-align: justify;
   font-size: 20px;
 }
+/* Page Layout End */
 </style>

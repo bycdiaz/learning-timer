@@ -51,9 +51,10 @@ export default {
 
 <style scoped>
 textarea {
-  width: 80%;
-  height: 100px;
+  width: 60%;
+  height: 80px;
   margin-top: 20px;
+  border-radius: 10px;
 }
 
 .form {
@@ -61,5 +62,6 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 0px;
 }
 </style>

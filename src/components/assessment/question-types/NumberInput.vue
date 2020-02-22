@@ -42,6 +42,8 @@ export default {
 <style>
 .number-input {
   height: 30px;
+  width: 125px;
+  margin-top: 30px;
 }
 
 .form {
@@ -49,7 +51,8 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px 10px;
+  margin-left: 0px;
+
 }
 
 input[type=number]::-webkit-inner-spin-button, 

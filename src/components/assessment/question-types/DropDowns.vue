@@ -55,11 +55,16 @@ export default {
 
 <style>
 
+.drop-down {
+  margin: 20px 0px;
+}
+
 .select {
   color: #26539c;
   background-color: white;
-  border-radius: 10px;
-  size: 40px;
+  border-radius: 4px;
+  width: 140px;
+  height: 25px;
 }
 
 </style>

@@ -23,7 +23,7 @@ export default {
 
 .button {
   border-width: 3px;
-  width: 35%;
+  width: 25%;
   margin: 0 auto;
   background-color: white;
   border-color: #26539c;
@@ -35,7 +35,7 @@ export default {
 
 .button:hover {
   border-width: 3px;
-  box-shadow: 3px 3px 5px grey;
+  box-shadow: 3px 3px 5px rgb(0, 0, 0);
   transition: box-shadow 0.2s ease-in-out;
   background-color: #26539c;
   transition: background-color 0.01s ease-in-out;

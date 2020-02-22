@@ -8,8 +8,9 @@
       :question="questions[currentPage]"
       @change="answers[currentPage] = $event"
       @validate="validStatus = $event"
+      class="question-template"
     />
-    <InputSummary :answers="answers" v-else />
+    <InputSummary class="input-summary" :answers="answers" v-else />
     <div class="buttons">
       <button class="button" @click="currentPage--" v-if="currentPage > 0 && currentPage < 6">Previous</button>
       <button
@@ -58,17 +59,12 @@ export default {
 </script>
 
 <style>
-
-.title {
-  margin-bottom: 30px;
-}
-
-.button {
-  margin: 0 auto;
+#assessment > * {
+  margin-bottom: 20px;
 }
 
 .button:disabled {
-  width: 35%;
+  width: 25%;
   margin: 0 auto;
   background-color: white;
   border-color: #646464;

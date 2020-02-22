@@ -20,7 +20,7 @@ export default {
   text-align: center;
   animation-duration: 1.2s;
   animation-delay: 0s;
-  text-shadow: 4px 4px 10px rgb(122, 122, 122);
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
 </style>

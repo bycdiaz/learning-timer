@@ -1,21 +1,18 @@
 <template>
-  <div class="question">
-    <div>
-      <p>{{ content.prompt }}</p>
-
-      <form>
-        <div v-for="option in content.options" :key="option.value">
-          <input
-            type="radio"
-            :value="option.attributes.value"
-            v-model="radioValue"
-            @change="validate(option)"
-          />
-          <span>{{ option.text }}</span>
-        </div>
-        <FormErrors :errorStatus="selected" />
-      </form>
-    </div>
+  <div>
+    <p>{{ content.prompt }}</p>
+    <form>
+      <div v-for="option in content.options" :key="option.value">
+        <input
+          type="radio"
+          :value="option.attributes.value"
+          v-model="radioValue"
+          @change="validate(option)"
+        />
+        <span class="option">{{ option.text }}</span>
+      </div>
+      <FormErrors :errorStatus="selected" />
+    </form>
   </div>
 </template>
 
@@ -48,4 +45,17 @@ export default {
 </script>
 
 <style>
+form {
+  margin: 10px 20px;
+}
+
+.option {
+  font-size: 1em;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 5%;
+    height: 1.25em;
+}
 </style>

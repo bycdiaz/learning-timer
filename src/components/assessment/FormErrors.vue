@@ -13,9 +13,10 @@ export default {
 
 <style>
 .error {
-  background-color: rgb(251, 86, 86);
-  border-radius: 10px;
+  background-color: #f67272;
+  border-radius: 6px;
   margin: 10px 0px;
-  padding: 5px 5px;
+  padding: 10px 20px;
+  color: #811919;
 }
 </style>
