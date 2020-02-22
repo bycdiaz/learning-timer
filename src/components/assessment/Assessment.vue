@@ -1,6 +1,6 @@
 <template>
   <div id="assessment">
-    <PageTitle title="Time Until Dev" />
+    <PageTitle class="title" title="Time Until Dev" />
     <QuestionTemplate
       v-if="currentPage < questions.length"
       :page="currentPage"
@@ -11,13 +11,14 @@
     />
     <InputSummary :answers="answers" v-else />
     <div class="buttons">
-      <button @click="currentPage--" v-if="currentPage > 0 && currentPage < 6">Previous</button>
+      <button class="button" @click="currentPage--" v-if="currentPage > 0 && currentPage < 6">Previous</button>
       <button
+        class="button"
         @click="validStatus === 'valid' ? currentPage++ : null"
         v-if="currentPage <= questions.length - 1"
         :disabled="validStatus === 'invalid'"
       >Next Page</button>
-      <router-link to="/results" tag="button" v-if="currentPage === 5">Submit for Review</router-link>
+      <router-link class="button" to="/results" tag="button" v-if="currentPage === 5">Submit for Review</router-link>
     </div>
   </div>
 </template>
@@ -57,4 +58,24 @@ export default {
 </script>
 
 <style>
+
+.title {
+  margin-bottom: 30px;
+}
+
+.button {
+  margin: 0 auto;
+}
+
+.button:disabled {
+  width: 35%;
+  margin: 0 auto;
+  background-color: white;
+  border-color: #646464;
+  border-width: 3px;
+  color: #646464;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px 0px;
+}
 </style>

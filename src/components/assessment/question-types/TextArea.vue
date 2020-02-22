@@ -1,11 +1,12 @@
 <template>
-  <div class="question">
-    <form>
+  <div>
+    <form class="form">
       <p>{{ content.prompt }}</p>
       <textarea
         value="answer"
         v-model="textInput"
         @input="validate(textInput)"
+        class="text-area"
       >
       </textarea>
       <FormErrors :errorStatus="invalidInput" />
@@ -36,9 +37,11 @@ export default {
       const punctuation = ['.', '?', '!'];
 
       if (length >= 20 && firstChar === firstChar.toUpperCase() && punctuation.includes(lastChar)) {
+        this.invalidInput = false;
         this.$emit('validate', "valid");
         this.$emit('change', textInput);
       } else {
+        this.invalidInput = true;
         this.$emit('validate', "invalid");
       }
     }
@@ -46,5 +49,17 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+textarea {
+  width: 80%;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 </style>

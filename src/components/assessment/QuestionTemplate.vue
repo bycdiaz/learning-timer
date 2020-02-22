@@ -11,6 +11,7 @@
         @validate="$emit('validate', $event)"
         :answers="answers"
         :page="page"
+        class="question"
       />
   </div>
 </template>
@@ -41,5 +42,13 @@ export default {
 </script>
 
 <style scoped>
+.question-template {
+  font-size: 18px;
+}
+
+.directions {
+  margin-bottom: 20px;
+  font-style: italic;
+}
 
 </style>

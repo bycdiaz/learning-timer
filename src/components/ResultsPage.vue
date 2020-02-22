@@ -1,7 +1,7 @@
 <template>
   <div class="results">
-    <PageTitle />
-    <p>Here are your results:</p>
+    <PageTitle title="Time Until Dev"/>
+    <p class="text">Here are your results:</p>
     <p>
       I know what you are thinking... Where is the timeline? I came here to see how long it would
       take me to become a programmer. Here is the hard truth: estimating when you'll know enough
@@ -12,7 +12,7 @@
       of varying difficulty, rate at which you work through projects of varying difficulty, etc,
       etc, etc...
     </p>
-    <p>
+    <p class="text">
       Here are a few tips that can help get you there:
     </p>
     <ul>
@@ -22,7 +22,7 @@
       <li>Find joy in the learning process. Progress is hard if all you think about is the prize.</li>
       <li>Don't compare your current skills or learning pace to others. Everyone has different things going on in their life.</li>
     </ul>
-    <router-link to="/" tag="button">Go Again</router-link>
+    <router-link class="button" to="/" tag="button">Go Again</router-link>
   </div>
 </template>
 
@@ -38,5 +38,17 @@ export default {
 </script>
 
 <style>
+.text {
+  margin:10px 0px;
+}
 
+.results {
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: circle;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
 </style>

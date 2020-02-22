@@ -21,7 +21,7 @@ const questions = [
           attributes: {
             type: "radio",
             name: "focusLevel",
-            value: "high focus",
+            value: "High Focus",
           },
           text: "80% - 100%"
         },
@@ -29,7 +29,7 @@ const questions = [
           attributes: {
             type: "radio",
             name: "focusLevel",
-            value: "moderate focus",
+            value: "Moderate Focus",
           },
           text: "50% - 79%"
         },
@@ -37,7 +37,7 @@ const questions = [
           attributes: {
             type: "radio",
             name: "focusLevel",
-            value: "low focus",
+            value: "Low Focus",
           },
           text: "0% - 49%"
         },
@@ -54,7 +54,7 @@ const questions = [
           attributes: {
             type: "radio",
             name: "motivationLevel",
-            value: "very motivated",
+            value: "Very Motivated",
           },
           text: "Very Motivated"
         },
@@ -62,7 +62,7 @@ const questions = [
           attributes: {
             type: "radio",
             name: "motivationLevel",
-            value: "fairly motivated",
+            value: "Fairly Motivated",
           },
           text: "Fairly Motivated"
         },
@@ -70,7 +70,7 @@ const questions = [
           attributes: {
             type: "radio",
             name: "motivationLevel",
-            value: "mildly motivated",
+            value: "Mildly Motivated",
           },
           text: "Mildly Motivated"
         },
@@ -78,7 +78,7 @@ const questions = [
           attributes: {
             type: "radio",
             name: "motivationLevel",
-            value: "low motivation",
+            value: "Low Motivation",
           },
           text: "Not Motivated"
         },
@@ -98,15 +98,15 @@ const questions = [
               selectText: "Please select one"
             },
             {
-              value: "fast pace",
+              value: "Fast Pace",
               selectText: "Fast"
             },
             {
-              value: "medium pace",
+              value: "Medium Pace",
               selectText: "Medium"
             },
             {
-              value: "slow pace",
+              value: "Slow Pace",
               selectText: "Slow"
             }
           ],

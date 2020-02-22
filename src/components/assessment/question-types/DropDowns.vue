@@ -8,6 +8,7 @@
           :key="dropdown.value"
           v-model="selection"
           @change="validate(selection)"
+          class="select"
         >
           <option 
             v-for="option in dropdown.dropSelections"
@@ -53,5 +54,12 @@ export default {
 </script>
 
 <style>
+
+.select {
+  color: #26539c;
+  background-color: white;
+  border-radius: 10px;
+  size: 40px;
+}
 
 </style>
