@@ -1,6 +1,6 @@
 <template>
   <div id="landing">
-    <PageTitle class="animated fadeInRight" title="Time Until Dev" />
+    <PageTitle class="title" title="Time Until Dev" />
     <Description class="description" />
     <ButtonBegin class="button" buttonText="Get Started" />
   </div>
@@ -26,6 +26,23 @@ export default {
 </script>
 
 <style scoped>
+.title {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 #landing {
   display: flex;
   justify-content: center;

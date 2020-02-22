@@ -13,7 +13,7 @@
       etc, etc...
     </p>
     <p class="text">
-      Here are a few tips that can help get you there:
+      Here are some tips that can help get you there:
     </p>
     <ul>
       <li>Pick one learning resource and stick with it.</li>
