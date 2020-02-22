@@ -26,11 +26,9 @@ export default {
     methods: {
     validate(numberInput) {
       if (parseInt(numberInput) > 0) {
-        console.log("Valid");
         this.$emit('validate', "valid");
         this.$emit('change', numberInput);
       } else {
-        console.log("Not Valid");
         this.$emit('validate', "invalid");
       }
     }
