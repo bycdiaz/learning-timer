@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 .title {
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-name: slidein;
 }
 
