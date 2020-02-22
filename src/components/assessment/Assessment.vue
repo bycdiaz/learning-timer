@@ -1,6 +1,6 @@
 <template>
   <div id="assessment">
-    <PageTitle title="Learning Timeline" />
+    <PageTitle title="Time Until Dev" />
     <QuestionTemplate
       v-if="currentPage < questions.length"
       :page="currentPage"
