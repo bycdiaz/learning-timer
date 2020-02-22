@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
-    <PageTitle title="How long until I'm a developer"/> 
-    <Description /> 
-    <ButtonBegin buttonText = "Get Started"/>
+  <div id="landing">
+    <PageTitle class="title" title="Learning Timeline"/> 
+    <Description class="description" /> 
+    <ButtonBegin class="button" buttonText= "Get Started"/>
   </div>
 </template>
 
@@ -23,5 +23,18 @@ export default {
 </script>
 
 <style>
+#landing {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
+#landing > * {
+  margin-bottom: 20px;
+}
+
+.button {
+  width: 30%;
+  margin: 0 auto;
+}
 </style>

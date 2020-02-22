@@ -41,8 +41,5 @@ export default {
 </script>
 
 <style scoped>
-  .directions {
-    font-style: italic;
-    font-size: 14px
-  };
+
 </style>

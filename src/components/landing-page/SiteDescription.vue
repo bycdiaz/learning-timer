@@ -1,5 +1,5 @@
 <template>
-  <div class="title">
+  <div>
     <p>
       Welcome! You are here because you want to know how long it will take you
       to become a programmer. You'll be asked a few basic questions and then 
