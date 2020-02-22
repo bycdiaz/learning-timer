@@ -1,6 +1,6 @@
 <template>
   <div class="question-template">
-    <p>
+    <p class="directions">
       Please answer the question below and click Next Page after you
       are satisfied with your entry.
     </p>
@@ -40,8 +40,9 @@ export default {
 };
 </script>
 
-<style>
-.question-template {
-  border: 1px black solid;
-}
+<style scoped>
+  .directions {
+    font-style: italic;
+    font-size: 14px
+  };
 </style>

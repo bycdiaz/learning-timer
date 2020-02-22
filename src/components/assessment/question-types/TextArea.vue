@@ -35,7 +35,7 @@ export default {
       const lastChar = textInput.slice(-1);
       const punctuation = ['.', '?', '!'];
 
-      if (length >= 30 && firstChar === firstChar.toUpperCase() && punctuation.includes(lastChar)) {
+      if (length >= 20 && firstChar === firstChar.toUpperCase() && punctuation.includes(lastChar)) {
         this.$emit('validate', "valid");
         this.$emit('change', textInput);
       } else {

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <PageTitle title="How long until"/> 
+    <PageTitle title="How long until I'm a developer"/> 
     <Description /> 
     <ButtonBegin buttonText = "Get Started"/>
   </div>

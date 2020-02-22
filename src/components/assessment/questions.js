@@ -2,7 +2,7 @@ const questions = [
   {
     type: "TextArea",
     content: {
-      prompt: "In at least 30 characters, please describe your reason for learning to code. Input must begin with capital letter and end with punctuation (., ?, !).",
+      prompt: "In at least 20 characters, please describe your reason for learning to code. Input must begin with capital letter and end with punctuation (., ?, !).",
       value: '',
     },
   },
@@ -21,7 +21,7 @@ const questions = [
           attributes: {
             type: "radio",
             name: "focusLevel",
-            value: "high",
+            value: "high focus",
           },
           text: "80% - 100%"
         },
@@ -29,7 +29,7 @@ const questions = [
           attributes: {
             type: "radio",
             name: "focusLevel",
-            value: "moderate",
+            value: "moderate focus",
           },
           text: "50% - 79%"
         },
@@ -37,7 +37,7 @@ const questions = [
           attributes: {
             type: "radio",
             name: "focusLevel",
-            value: "low",
+            value: "low focus",
           },
           text: "0% - 49%"
         },
@@ -54,7 +54,7 @@ const questions = [
           attributes: {
             type: "radio",
             name: "motivationLevel",
-            value: "very",
+            value: "very motivated",
           },
           text: "Very Motivated"
         },
@@ -62,7 +62,7 @@ const questions = [
           attributes: {
             type: "radio",
             name: "motivationLevel",
-            value: "fairly",
+            value: "fairly motivated",
           },
           text: "Fairly Motivated"
         },
@@ -70,7 +70,7 @@ const questions = [
           attributes: {
             type: "radio",
             name: "motivationLevel",
-            value: "mildly",
+            value: "mildly motivated",
           },
           text: "Mildly Motivated"
         },
@@ -78,7 +78,7 @@ const questions = [
           attributes: {
             type: "radio",
             name: "motivationLevel",
-            value: "low",
+            value: "low motivation",
           },
           text: "Not Motivated"
         },
@@ -98,15 +98,15 @@ const questions = [
               selectText: "Please select one"
             },
             {
-              value: "fast",
+              value: "fast pace",
               selectText: "Fast"
             },
             {
-              value: "medium",
+              value: "medium pace",
               selectText: "Medium"
             },
             {
-              value: "slow",
+              value: "slow pace",
               selectText: "Slow"
             }
           ],

@@ -25,7 +25,4 @@ export default {
 
 <style>
 
-.qa-pair {
-  border: 1px black solid;
-}
 </style>

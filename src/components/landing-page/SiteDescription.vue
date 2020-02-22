@@ -1,10 +1,9 @@
 <template>
   <div class="title">
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Officiis nam repellendus, aspernatur, non culpa tempore 
-      numquam illo eligendi blanditiis quo sit aliquid dolorum. 
-      Nobis hic tenetur eveniet ipsam consequatur repellendus!
+      Welcome! You are here because you want to know how long it will take you
+      to become a programmer. You'll be asked a few basic questions and then 
+      you'll get some information about a potential timeline.
     </p>
   </div>
 </template>
