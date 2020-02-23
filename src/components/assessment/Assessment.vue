@@ -26,7 +26,7 @@
 
 <script>
 import PageTitle from "../Title.vue";
-import questions from "./questions.js";
+import questions from "../../json_files/questions.js";
 import QuestionTemplate from "./QuestionTemplate.vue";
 import InputSummary from "./InputSummary.vue";
 
@@ -59,13 +59,21 @@ export default {
 </script>
 
 <style>
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  margin: 0px 5px;
+}
+
 #assessment > * {
   margin-bottom: 20px;
 }
 
 .button:disabled {
   width: 25%;
-  margin: 0 auto;
   background-color: white;
   border-color: #646464;
   border-width: 3px;

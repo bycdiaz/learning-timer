@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import questions from "./questions.js";
+import questions from "../../json_files/questions.js";
 import TextArea from "./question-types/TextArea.vue";
 import NumberInput from "./question-types/NumberInput.vue";
 import RadioInput from "./question-types/RadioInput.vue";
@@ -44,5 +44,8 @@ export default {
 <style scoped>
 .question {
   margin: 20px 0px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 </style>

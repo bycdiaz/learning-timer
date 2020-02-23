@@ -20,18 +20,15 @@
           </option>
         </select>
       </div>
-      <FormErrors :errorStatus="selected" />
     </form>
   </div>
 </template>
 
 <script>
-import FormErrors from '../FormErrors.vue'
 
 export default {
   name: 'DropDowns',
     components: {
-    FormErrors,
   },
   props: ["content", "answers", "page"],
   data() {

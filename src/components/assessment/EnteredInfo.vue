@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import questions from './questions.js' 
+import questions from '../../json_files/questions.js' 
 
 export default {
   name: 'EnteredInfo',

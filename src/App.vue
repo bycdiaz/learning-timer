@@ -16,15 +16,12 @@ export default {
 }
 
 .buttons {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  margin: 0 auto;
 }
 
 .button {
   border-width: 3px;
   width: 25%;
-  margin: 0 auto;
   background-color: white;
   border-color: #26539c;
   color: #26539c;

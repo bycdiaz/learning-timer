@@ -11,18 +11,15 @@
         />
         <span class="option">{{ option.text }}</span>
       </div>
-      <FormErrors :errorStatus="selected" />
     </form>
   </div>
 </template>
 
 <script>
-import FormErrors from '../FormErrors.vue'
 
 export default {
   name: "RadioInput",
   components: {
-    FormErrors,
   },
   props: ["content", "answers", "page"],
   data() {
